@@ -4,23 +4,22 @@ print("Hello world") # prints statement in ""
 "Hello world" 
 
 #Newline Character
-# prints to separate lines
 print("Hello")
 print("world")
 
-# prints to same line
+# overrides print command default newline character behavior
 print("Hello ", end='')
 print("world")
 
-# prints to same line
+# prints to same line as above
 print("Hello ", end="")
 print("world")
 
-# prints with a tab character
+# replaces newline default to print on same line with a tab character
 print("Hello ", end='\t')
 print("world")
 
-# prints with a custom ending character, !, after first word
+# prints to same line with a custom ending character, !, after first word
 print("Hello ", end='!')
 print("world")
 
@@ -52,7 +51,7 @@ print("These are the colors of a rainbow!");
 #. . . .    
 #add code above this line
 
-# Comment out line of code with error
+# Comment out the line of code with error
 #add code below this line
 #. . . .   
 # prnt("Red")
