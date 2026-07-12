@@ -55,4 +55,41 @@ variable_1 = "Python fundamentals are very useful"
 variable_2 = variable_1
 print(variable_2)
 
+# Arithmetic Operators
+Type casting (or type conversion) changes a variable’s data type.  
+The type command, type() returns the data type of the value stored in a variable: int, float, str, bool.
 
+Booleans map to ints: False = 0, True = 1.
+
+The + operator concatenates strings; the * operator repeats strings. 
+
+Incrementing or decrementing changes a variable by a fixed amount. You will most often have a counting variable, which means you will increment or decrement by 1. (a += 1, a -= 1).
+
+Addition uses +.  
+Incrementing: a = a + 1 or a += 1.
+The + operator concatenates strings. 
+
+String concatenation is the act of combining two strings together. String concatenation uses +.  
+Subtraction uses -.  
+Strings cannot use -.
+
+Subtraction uses -.
+Decrementing uses -=.
+
+Multiplication uses *.  
+Shorthand: *=.  
+Strings can be multiplied by ints. The * operator repeats strings.
+
+Division uses /. It returns a float.  
+Shorthand: /=.  
+Floor division uses // for an int result.
+
+Modulo (%) returns the remainder.  
+It uses division internally but is not division.  
+It can check even/odd and more.
+
+Powers use ** (exponents, raise a number to a specific power).  
+Square roots require math.sqrt or ** 0.5
+
+Order of operations follows PEMDAS.
+1.Parenthesis, 2. Exponents- powers and square roots, 3. Multiplication and Division- left to right, 4. Addition and Subtraction- left to right.
