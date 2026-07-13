@@ -112,7 +112,8 @@ When chaining several or Statements together, they are evaluated in a left-to-ri
 
 The not operator produces the opposite of the boolean expression that it modifies. 
 
-Short Circuiting: If Python can determine the result of a boolean expression before evaluating the entire thing, it will stop and return the value. 
+Short Circuiting: 
+If Python can determine the result of a boolean expression before evaluating the entire thing, it will stop and return the value. 
 If the first boolean expression for the or Operator is true, then the entire thing is true. The second boolean expression is ignored.
 If the first boolean expression for the and Operator is false, then the entire thing is false. The second boolean expression is ignored.
 
@@ -126,4 +127,3 @@ The lab challenge is to create a False boolean expression.
 
 ## Tutorial Lab Challenge
 Boolean expression using one equality operator (== or !=), one of the less than operators (<, <=), one of the greater than operators (>, >=), and two different logical operators (and, or, not).
-print(4==5 and 4<=5 or 4>5) # Output: False
