@@ -21,3 +21,9 @@ print(5 * 8 // 3 + (18 - 8) ** 2 - 25) # Output: 88
 # Tutorial Lab 4: Boolean Operators
 print((5 > 7) and (False or 1 < 9) or 4 != 5 and not 2 >= 3) 
 # Output: True 
+
+# Tutorial Lab Challenge
+# using an equality operator, 
+# a less than and a greater than operators 
+# and two different logical operators
+print(4==5 and 4<=5 or 4>5) # Output: False
