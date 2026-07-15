@@ -182,3 +182,73 @@ The lab challenge is to write a program to determine the month of the year based
 ### Tutorial Lab Challenge
 Using the simplest conditional, if statement, the program continues to execute even after it reached a condition that is true.
 
+## ForLoops.py Overview
+For loops run a repeated code block using range() followed by a colon. All repeated statements must be indented.
+Identify the pattern first, then write the loop.
+
+Turtle Graphics
+Turtle graphics let you draw shapes by moving a “turtle” around the screen with commands like forward(), left(), and right(). It is often used to visualize loop patterns.
+
+Challenge One draws a large square with four smaller square paths using fixed forward moves and right turns. A for loop cannot be used because the movement sequence does not follow a predictable pattern of repeated distances or angles.
+Challenge Two draws a circle by repeating the same forward move and 1‑degree turn 360 times. It does not use the loop variable because the counter value never affects the movement — the loop simply runs 360 identical steps to complete the circle.
+Challenge Three draws a square‑maze pattern by increasing the forward distance each loop. The program multiplies the loop index i to generate longer forward moves, producing 45 expanding lines across growing square segments.
+
+## WhileLoops.py Overview
+While loops are useful when you are waiting for a certain event to occur.
+While loop syntax — runs as long as its condition remains true. 
+Counting variable — declare count = _ before the loop.
+Incrementing — update the counter inside the loop so it eventually ends. count = count + _
+
+Infinite loop causes — a condition that never becomes false, such as while True: or a variable that never gets incremented. If the counting variable is 0, it remains 0 and if it is less than the while loop condition, it will forever be less so the loop will never stop.
+
+Break statement — immediately exits a while loop when a specific condition is met.
+
+Turtle Graphics
+Challenge One: A While loop cannot be used. Each forward/turn pair is a fixed, manual instruction, so only straight-line commands works.
+Challenge Two: A While loop can be used but it adds no benefit over the for loop. You just repeat the same 360 steps until a counter reaches 360.
+Challenge Three: replaces for with a manual counter.
+
+## NestedLoops.py Overview
+Nested loops run one loop inside another to create repeated digit‑pattern output.  
+Refactor the three nested loops to reduce unnecessary repetition.  
+Syntax: the outer loop selects the digit; the inner loop controls how many times it prints. 
+
+Relationship: the outer loop selects the unit of work (row, block, or digit), and the inner loop repeats that work a fixed number of times per cycle.  
+The inner loop starts fresh on every outer‑loop iteration, producing structured repeated patterns.
+
+Relationship example explanation: The outer loop selects the row, and the inner loop repeats the column work. range(10) in the inner loop runs 10 times per row, producing a fixed repeated pattern each cycle. end="" keeps the pattern in columns in each row.
+
+Relationship example explanation: the outer loop defines one block, and the inner loop repeats the block’s contents.  
+`i` selects the block header (`&&`), and `j` runs three times to emit the three `*` lines, producing a fixed repeated pattern each cycle.
+
+Relationship example explanation: The outer loop selects the digit, and the inner loop repeats it.  
+`range(row)` runs exactly `row` times, so each digit prints as many times as its value.
+
+## Module4lab.py Overview
+Module 4 tutorial labs demonstrates core loop structures and control flow in Python. 
+Control flow is the set of rules that determine which lines of code run and in what order.
+Loops repeat code, conditionals choose between branches, and break or similar statements alter the normal execution path.
+
+It includes for‑loop examples for even/odd checks, fixed‑count repetition, and exponent calculation. The purpose of range in a for loop is to set up the number of iterations the loop will execute. 
+
+It also shows while‑loop counters, breaking from infinite loops, and interrupting loop execution. The while loop must have an exit condition. By incrementing the counter variable, we ensure that the loop will eventually end. If you do not increment counter in this loop, you will create an endless loop because counter will never reach 10 or greater.
+ 
+Lab Challenge: The file ends with a nested‑loop chessboard example separating logic into row parity and then column parity.
+
+Row parity determines which pattern the row uses (condition true for even rows, condition false for odd rows).  
+Column parity then alternates characters within that pattern.
+
+Parity means checking whether an index is even or odd, which controls the pattern selection.
+
+### Tutorial Lab Challenge
+Nested Loop with a decision‑making structure to create a Chessboard:
+
+This program builds the checkerboard by separating the logic into row parity and column parity.
+
+- The outer loop selects each row.
+- The program checks whether the row index is even or odd.
+  - If the row index is even, the condition is **true**, and the row uses the pattern: even columns print `X`, odd columns print `O`.
+  - If the row index is odd, the condition is **false**, and the row uses the flipped pattern: even columns print `O`, odd columns print `X`.
+
+Row parity determines which pattern the row uses, and column parity determines the alternating characters within that pattern. This produces a checkerboard.
+
