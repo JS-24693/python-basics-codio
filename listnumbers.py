@@ -15,10 +15,10 @@ print(total)                 # Output: 0
 
 # TypeError with non-numeric elements
 # my_list = ["abc", "def", "ghi"]
-# print(sum(my_list))          # Output: TypeError: unsupported operand type(s) for +: 'int' and 'str'
+# print(sum(my_list))    # Output: TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
 # my_list = [1, 2, 3, "red"]
-# print(sum(my_list))          # Output: TypeError: unsupported operand type(s) for +: 'int' and 'str'
+# print(sum(my_list))    # Output: TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
 # use sum() function, length and average to calculate average of a list
 my_list = [1, 2, 3, 4, 5] # declare a list with 5 elements

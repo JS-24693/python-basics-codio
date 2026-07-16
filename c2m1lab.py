@@ -91,3 +91,74 @@ for number in numbers:      # loop through each number in the numbers list
         final_result.append("odd")       # append "odd" to the final result list
 
 print("The results are: ", final_result)
+
+# Replace each element greater than 10 with "*"
+numbers = [30, 1, 20, 4]
+
+for number in numbers:
+    if number > 10:
+        numbers[numbers.index(number)] = '*'
+
+print(numbers)
+
+# print a list called my_list three times if the length of the list is less than 5, otherwise print the list once
+# and one time if the length of the list is greater than or equal to 5
+my_list = ['hi', 'hello']
+
+if len(my_list) < 5:  # check if the length of my_list is less than 5
+    print(my_list * 3)  # print the list three times
+else:                 # if the length of my_list is greater than or equal to 5
+    print(my_list)      # print the list once
+
+my_list = [65, 111, 2, 81, 65, 32]
+
+if len(my_list) < 5:  # check if the length of my_list is less than 5
+    print(my_list * 3)  # print the list three times
+else:                 # if the length of my_list is greater than or equal to 5
+    print(my_list)      # print the list once
+
+# print the first string when arranged in alphabetical order
+strings = ['luck', 'cat', 'kid', 'house']
+strings.sort()
+print(strings.pop(0))   # remove and return the first element of the list after sorting
+
+strings = ['duck', 'dddd', 'mouse', 'kite']
+strings.sort()
+print(min(strings))    # print the first string when arranged in alphabetical order using the min() function
+
+# add the next two increasing numbers to a list that contains ints
+numbers = [1, 2, 3, 4]
+
+for i in range(2):            # loop to add the next two increasing numbers to the list
+  new_number = numbers[-1] + 1 # add 1 to the last number in the list
+  numbers.append(new_number)  # append the new number to the list
+print(numbers)
+
+## with negative ints
+numbers = [-5, -4, -3, -2]
+
+for i in range(2):   
+  new_number = numbers[-1] + 1
+  numbers.append(new_number)
+print(numbers)
+
+# Print the list in rows and columns without the brackets and commas
+# and move diagonally from the top-left to the bottom right, replace each 0 with a 1
+# data is the 2D list with 3 rows and 3 columns. 
+# the variable number represents the number of rows and columns in the 2D list
+data =   [
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0]
+          ]  # declare a 2D list with 3 rows and 3 columns
+
+number = 3  # declare a variable to hold the number of rows and columns in the 2D list
+
+for row in range(number):   # loop through each row in the 2D list
+  for column in range(number):  # loop through each column in the 2D list
+    if row == column:             # check if the row index is equal to the column index (diagonal elements)
+      data[row][column] = 1          # replace the diagonal elements with 1
+    print(f"{data[row][column]} ", end="") 
+    # print the element in the current row and column with a space, without moving to a new line 
+  print() 
+  # print a new line after printing all columns in the current row

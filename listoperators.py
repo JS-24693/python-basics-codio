@@ -47,7 +47,7 @@ else:                         # If neither of the above conditions are true, lis
     print("list_2 is longer than list_1")
     # Output: list_1 is longer than list_2
 
-# Remove a list_1 element
+## Removing a list_1 element
 list_1 = [12, 66, 52, 97, 28, 41] # 6 elements
 list_2 = [68, True, 34, False, 41.897, "apple"] # 6 elements
 
@@ -59,7 +59,7 @@ else:                         # If neither of the above conditions are true, lis
     print("list_2 is longer than list_1")
     # Output: list_1 and list_2 are the same length
 
-# Add items to list_2
+## Adding items to list_2
 list_1 = [12, 66, 52, 97, 28, 41] # 6 elements
 list_2 = [68, True, 34, False, 41.897, "apple", "pigeon", 6] # 8 elements
 
@@ -71,7 +71,7 @@ else:                         # If neither of the above conditions are true, lis
     print("list_2 is longer than list_1")
     # Output: list_2 is longer than list_1
 
-# Change list_2 to use a range‑bound loop variable
+## Changing list_2 to use a range‑bound loop variable
 list_1 = [12, 66, 52, 97, 28, 41] # 6 elements
 list_2 = [i for i in range(0, 20)] # 20 elements
 
