@@ -1,4 +1,4 @@
-# Python Basics – Codio Course
+# Python Basics: Selection and Iteration – Codio Course
 
 Practice files from Codio Programming in Python Certificate Course.
 Includes introductory Python scripts and exercises.
@@ -251,4 +251,68 @@ This program builds the checkerboard by separating the logic into row parity and
   - If the row index is odd, the condition is **false**, and the row uses the flipped pattern: even columns print `O`, odd columns print `X`.
 
 Row parity determines which pattern the row uses, and column parity determines the alternating characters within that pattern. This produces a checkerboard.
+
+# Python Basic Structures: Lists, Strings and Files – Codio Course
+
+## listbasics.py Overview
+Lists are a built‑in data structure declared with [], with elements separated by commas. Elements may be of different data types.
+
+range() creates a sequence of numbers; in a for loop you bind its values to a loop variable.
+
+An empty list is written as [].
+
+List elements are accessed by index, starting at 0; negative indices access items from the end.
+
+Modify a list by assigning a new value to the element at its index using =.
+
+## listoperators.py Overview
+List concatenation uses + to join two lists.
+List repetition uses * to repeat a list n times.
+
+The in operator returns True or False based on membership.
+
+len() returns the number of elements; len(my_list) == 0 checks for an empty list.
+
+Slicing (:) returns a sublist using start (inclusive), stop (exclusive), and step.
+
+## listmethods.py Overview
+List methods are called by writing the list variable, a dot, the method name, and any parameters.
+
+append() adds a single element to the end of the list.
+
+pop() removes and returns the last element, or the element in a specified index.
+
+insert() adds an element at a specified index.
+
+remove() deletes the first matching element by value and returns nothing.
+
+count() returns how many times a value appears in the list.
+
+index() returns the index of a given value.
+
+sort() orders the list in ascending order; sort(reverse=True) orders it in descending.
+
+reverse() flips the list so elements appear from last to first.
+
+## listnumbers.py Overview
+Functions that work with lists of numbers:
+sum() returns the total of all numeric elements; works with ints and floats, not strings.
+min() returns the smallest element. For strings, it selects the earliest alphabetically; digits sort before letters, so "123" is smallest.
+max() returns the largest element. For strings, it selects the latest alphabetically.
+
+## listiteration.py
+Iterating over a list processes each element from index 0 to the final index.
+A for loop is the standard way to iterate; the list name is plural, and the loop variable is its singular form for readability.
+A while loop can iterate but is less efficient because you must track the list length, manage an index variable, and increment it manually to access each element.
+
+## _2dlist.py
+A 2D list is a list whose elements are themselves lists.
+Declare it with outer brackets and inner brackets, separated by commas; indent inner lists for readability.
+Indexing a 2D list returns an inner list. Concatenate lists using +.
+Use append() to add a new inner list.
+Iterate with indexes or nested loops to access inner‑list elements; iterate without indexes using for element in sequence.
+Use a single print statement to print a 2D list on one line. Use a single for loop to print each inner list of a 2D list on its own line. Use a nested loop to print each element of the inner lists without square brackets or commas and to control spacing between each element. 
+Sort inner lists with a loop.
+Use loops with sum(), min(), or max(); initialize a total variable before summing inner lists.
+Declaring numbers with list comprehension to build a 10×10 2D list of random digits produces ten inner lists, each containing ten elements. Each run generates new values because the comprehension calls the random function for every element.
 
