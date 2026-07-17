@@ -1,4 +1,4 @@
-# Python Basics: Selection and Iteration – Codio Course
+# Python Basics: Selection and Iteration – Codio Course 1
 
 Practice files from Codio Programming in Python Certificate Course.
 Includes introductory Python scripts and exercises.
@@ -44,8 +44,8 @@ Base‑10 integers do not use leading zeros.
 ### Floating Point (Float) Variables
 Floats are numbers with a decimal point, positive or negative.
 
-## M1Lab.py Overview
-These labs demonstrate basic variable assignment, value reassignment, and printing behavior in Python. 
+## c1m1.py Overview
+Course 1 Module 1 labs demonstrate basic variable assignment, value reassignment, and printing behavior in Python. 
 
 ### Tutorial Labs Content Overview
 Tutorial Lab 1 focuses on updating a variable and printing each new value, while Tutorial Lab 2 shows how different variable types can be reassigned and printed. The challenge below reinforces variable copying and output. 
@@ -121,7 +121,7 @@ If Python can determine the result of a boolean expression before evaluating the
 If the first boolean expression for the or Operator is true, then the entire thing is true. The second boolean expression is ignored.
 If the first boolean expression for the and Operator is false, then the entire thing is false. The second boolean expression is ignored.
 
-## M2Lab.py Overview
+## c1m2lab.py Overview
 These labs demonstrate arithmetic operators, concatenate and repeat strings, PEMDAS order of operations, and Boolean Operators in Python. 
 
 ### Tutorial Labs Content Overview
@@ -169,7 +169,7 @@ An elif statement follows these rules:
 -You may include as many elif statements as needed.
 -A final else must come after the last elif.
 
-## Mod3Lab.py Overview
+## c1m3lab.py Overview
 Conditionals are pieces of code that make a decision about what the program is going to do next.
 
 ### Tutorial Labs Content Overview
@@ -224,7 +224,7 @@ Relationship example explanation: the outer loop defines one block, and the inne
 Relationship example explanation: The outer loop selects the digit, and the inner loop repeats it.  
 `range(row)` runs exactly `row` times, so each digit prints as many times as its value.
 
-## Module4lab.py Overview
+## c1m4lab.py Overview
 Module 4 tutorial labs demonstrates core loop structures and control flow in Python. 
 Control flow is the set of rules that determine which lines of code run and in what order.
 Loops repeat code, conditionals choose between branches, and break or similar statements alter the normal execution path.
@@ -252,7 +252,7 @@ This program builds the checkerboard by separating the logic into row parity and
 
 Row parity determines which pattern the row uses, and column parity determines the alternating characters within that pattern. This produces a checkerboard.
 
-# Python Basic Structures: Lists, Strings and Files – Codio Course
+# Python Basic Structures: Lists, Strings and Files – Codio Course 2
 
 ## listbasics.py Overview
 Lists are a built‑in data structure declared with [], with elements separated by commas. Elements may be of different data types.
@@ -302,17 +302,116 @@ max() returns the largest element. For strings, it selects the latest alphabetic
 
 ## listiteration.py
 Iterating over a list processes each element from index 0 to the final index.
+
 A for loop is the standard way to iterate; the list name is plural, and the loop variable is its singular form for readability.
+
 A while loop can iterate but is less efficient because you must track the list length, manage an index variable, and increment it manually to access each element.
 
 ## _2dlist.py
 A 2D list is a list whose elements are themselves lists.
-Declare it with outer brackets and inner brackets, separated by commas; indent inner lists for readability.
-Indexing a 2D list returns an inner list. Concatenate lists using +.
-Use append() to add a new inner list.
-Iterate with indexes or nested loops to access inner‑list elements; iterate without indexes using for element in sequence.
-Use a single print statement to print a 2D list on one line. Use a single for loop to print each inner list of a 2D list on its own line. Use a nested loop to print each element of the inner lists without square brackets or commas and to control spacing between each element. 
-Sort inner lists with a loop.
-Use loops with sum(), min(), or max(); initialize a total variable before summing inner lists.
-Declaring numbers with list comprehension to build a 10×10 2D list of random digits produces ten inner lists, each containing ten elements. Each run generates new values because the comprehension calls the random function for every element.
 
+### Declaring a 2D List
+A 2D list is a list of lists. Declare with outer brackets and inner brackets, separated by commas; indent inner lists for readability.
+
+### Accessing Elements
+Indexing returns an inner list. Use `+` to concatenate lists. Use `append()` to add an inner list.
+
+### Iteration
+Iterate with indexes or nested loops to access inner‑list elements. Use `for element in sequence` for index‑free iteration.
+
+### Printing
+Use a single print statement to print a 2D list on one line. Use one for loop to print each inner list on a separate line. Use nested loops to print individual elements without brackets or commas and to control spacing.
+
+### Sorting and Aggregation
+Sort inner lists with a loop. Use loops with `sum()`, `min()`, or `max()`; initialize a total variable before summing.
+
+### List Comprehension
+A 10×10 list comprehension of random digits creates ten inner lists of ten elements. New random values appear on each run.
+
+## c2m1lab.py
+Lab 1 iterates through a list of random integers, classifies each as odd or even, and appends the value to the correct list. random.randint(start, stop) generates integers in the given range, e.g., (0, 100).
+
+Lab 2 manually computes the sum of a list, then verifies the result against Python’s built‑in sum().
+
+Lab 3 prints the middle third of a list by slicing the correct index range. Slicing a list requires integer indices, not float indices, so if needing to divide to identify start and stop, use floor division '//' operator.
+
+Lab 4 cross‑references a list of random colors against warm, cool, and neutral color lists and counts matches and non‑matches.
+
+The lab challenge builds a program that takes a list of integers and outputs a new list labeling each element as odd or even.
+
+## strbasics.py
+Strings are sequences of characters inside quotes. Each string has a length and each character has an index.
+You can replace an entire string with the assignment operator, but you cannot modify individual characters.
+Use \n for line breaks.
+Use triple quotes to preserve whitespace.
+The in operator checks if a character or substring exists in another string.
+The slice operator (:) returns part of a string using start and stop indexes.
+Escape characters begin with \ and signal special meaning.
+Use double quotes for the outer string and single quotes inside to avoid syntax errors.
+
+## strfunctions.py
+String functions operate on a string and follow the syntax functionname(str) where the string is passed as a parameter.
+len(my_string) returns the total number of characters, including spaces.
+min(my_string) returns the smallest character by ASCII/Unicode order.
+max(my_string) returns the largest character by ASCII/Unicode order.
+
+## strmethods.py
+A string method is a built‑in operation that acts on a string.
+Methods use the syntax string.method(parameters) and are called with a dot after the string.
+Common string methods include upper(), lower(), strip(), replace(), and split().
+
+upper() and lower() convert characters to uppercase or lowercase.
+capitalize() returns a copy with only the first character uppercase.
+title() returns a copy with each word’s first letter uppercase.
+
+strip() removes leading or trailing characters and returns a modified copy.
+startswith() returns True or False if the string begins with a given substring. Optional to add the index numbers for start and stop parameters. Start is inclusive and Stop is exclusive.
+replace() returns a copy with one substring replaced by another.
+find() returns the index of a character or substring, or -1 if not found.
+
+## striteraction.py
+String iteration means processing a string one character at a time.
+You can iterate using a for loop or by indexing with a while loop. Using a while loop to iterate over a string requires a variable to represent the length of the string and another to represent the index.
+Iteration works by stepping through each character in sequence, starting at index 0 and advancing until the final index is reached.
+
+## strcomparison.py
+Use == and != to compare string values.
+Use is and is not to compare object identity, not content.
+
+is compares object identity, while == compares value.
+When a = 1 and b = 1, Python reuses the same integer object, so their IDs match.
+After a += 1, a becomes a different value, so Python allocates a new object and the ID changes.
+Use is for identity checks on strings and other objects; use == for numeric value comparison.
+
+String comparisons are case‑sensitive, so different capitalizations are not equal.
+Alphabetical order is determined by Unicode/ASCII value, so strings compare based on character sequence.
+
+## strformatting.py
+String interpolation inserts values into a string. You can combine strings with + and type casting, or use commas to avoid concatenation.
+
+.format() uses {} placeholders and substitutes values in order, unless you specify indexes inside the curly braces.
+
+Main interpolation forms include f‑strings, .format(), and % formatting.
+
+F‑strings embed expressions inside {}, such as listing the variable inside {}. They run fastest.
+
+% formatting uses specifiers like %s and %d. It is older, still readable, but not recommended for new code.
+%s means that the variable that will go in this position is a string.
+%i refers to integer
+%f refers to float.
+
+## c2m2lab.py
+Lab 1 — Count Uppercase and Lowercase  
+Write a program that counts uppercase and lowercase letters in a string, ignoring digits and symbols.
+
+Lab 2 — Reverse a String  
+Write a program that prints a string in reverse order.
+
+Lab 3 — Swap Case  
+Write a program that outputs a new string where uppercase becomes lowercase and lowercase becomes uppercase.
+
+Lab 4 — Count Vowels  
+Write a program that counts vowels (a, e, i, o, u) in a string.
+
+Lab Challenge — Replace Vowels  
+Write a program that replaces each vowel in my_string with *. For example, "Hello" becomes "H*ll*".
