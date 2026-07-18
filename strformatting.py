@@ -22,19 +22,19 @@ var2 = "luckiest"
 print("Yet {} I consider myself the {} man on the face of this earth.".format(var1, var2))
 # Yet today I consider myself the luckiest man on the face of this earth.
 
-# change var2
+# variation 1: change var2
 var1 = "today"
 var2 = True
 print("Yet {} I consider myself the {} man on the face of this earth.".format(var2, var1))
 # Yet True I consider myself the today man on the face of this earth.
 
-# change order of variables
+# variation 2: change order of variables
 var1 = "today"
 var2 = "luckiest"
 print("Yet {} I consider myself the {} man on the face of this earth.".format(var2, var1))
 # Yet luckiest I consider myself the today man on the face of this earth.
 
-# add index to {}
+# variation 3: add index to {}
 var1 = "today"
 var2 = "luckiest"
 print("Yet {1} I consider myself the {0} man on the face of this earth.".format(var1, var2))
@@ -70,7 +70,7 @@ var2 = "away"
 print("%s, up and %s" % (var1, var2))
 # Up, up and away
 
-# change var1 to int
+# variation 1: change var1 to int
 var1 = 7
 var2 = "away"
 print("%s, up and %i" % (var2, var1))

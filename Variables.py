@@ -37,7 +37,7 @@ print(integer_variable) # shows the value of the variable, 50
 # integer_variable = 050
 # print(integer_variable) # causes SyntaxError message
 
-#Floats Variables
+# Floats Variables
 float_variable = 50.0
 print(float_variable) # shows the value of the variable, 50.0
 
