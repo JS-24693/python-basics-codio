@@ -415,3 +415,93 @@ Write a program that counts vowels (a, e, i, o, u) in a string.
 
 Lab Challenge — Replace Vowels  
 Write a program that replaces each vowel in my_string with *. For example, "Hello" becomes "H*ll*".
+
+## writingfile.py
+- Navigate to the correct folder before creating or writing files.
+- Opening a file in write (`w`) mode creates the file if it does not exist.
+- Writing to a non‑existent file automatically creates a new empty file.
+- `writelines()` writes a list of strings without adding newline characters.
+- Writing to an existing file in write (`w`) mode erases its previous contents.
+- **Write (`w`)** replaces the file; **append (`a`)** adds new content to the end.
+- `open()` requires manual close; `with open()` auto‑closes the file and is safer.
+
+## readingfile.py
+
+- Open a file in read (`r`) mode to access its contents.
+- Reading a file that does not exist raises a `FileNotFoundError`.
+- Iterate line by line using:
+  - for loop — automatically stops at end of file.
+  - while loop — read until an empty string is returned.
+- The end of file (EOF) is represented by `""` when using `read()` or `readline()`.
+- readlines() reads all of the text file and returns all the strings in a list.
+- readline() reads one string at a time.
+- To read a file more than once, reset the pointer with `seek(0)`.
+- Use `seek()` to jump to a position and search for a keyword manually.
+
+File Reading + Writing Modes
+read + write: read and overwrite existing content.
+read + append: read and add new content to the end.
+
+Read → Write between two files: open both files and transfer lines. Direction of Transfer:
+
+Reading from dest → writing to source  
+You take the already‑written output file (destination.txt) and push its contents back into the original file (read_practice.txt). This overwrites the source with whatever was in the destination.
+
+Reading from source → writing to dest  
+You take the original input file (read_practice.txt) and copy or transform its contents into a new output file (destination.txt). This preserves the source and produces a modified or duplicated version in the destination.
+
+Strict summary:
+dest → source: overwrite original with processed output.
+source → dest: create new output without altering original.
+
+## csvfile.py
+- A CSV file is plain text where each row is a record and each value is separated by a delimiter (commas by default).
+- Use import csv because csv.reader will error if the module isn’t imported.
+- Print CSV contents by reading each row and formatting the fields for clarity.
+- Data for each CSV row is stored as a list of strings after reading.
+- Unpack loop variables by assigning each column to its own variable inside the `for` loop.
+- Read and write CSV files using different delimiters (e.g., `,`, `;`, `|`) by specifying the delimiter in `csv.reader` and `csv.writer`.
+- Use `writerow()` to write a single row and `writerows()` to write multiple rows at once.
+
+## c2m3lab.py
+
+### Lab 1 — Reading a File into a List
+- Instead of using `seek(0)` to reread a file, load all lines into a list.
+- Lists can be iterated multiple times without resetting a file pointer.
+- This avoids repositioning the file cursor and simplifies repeated processing.
+
+### Lab 2 — Summing Rows in a CSV
+- Use `files-lab2.csv`, a comma‑delimited CSV containing integers (3 columns × 4 rows).
+- Read each row, convert values to integers, and compute the row sum.
+- Print the sum for each row in a clear, readable format.
+
+### Lab 3 — Writing Superheroes to a CSV
+- Ask the user for a superhero name and superpower.
+- Write each pair to `superheroes.csv`.
+- When the user enters `stop` for the name, the program ends.
+- Demonstrates interactive CSV writing and loop termination.
+
+### Lab 4 — Caesar Cipher Encryption/Decryption
+- Encrypt letters (A–Z, a–z), digits (0–9), and symbols: space, `!`, `?`, `.`.
+- Other characters are ignored (not encrypted).
+- The cipher uses a key from 0–25.
+- Encryption steps:
+  - Build a list of all supported characters.
+  - Find the character’s index.
+  - Add the key to compute the encrypted index.
+  - Wrap around the list if needed.
+- Example: with key 13, `"K"` becomes `"X"`.
+- Read from `student_folder/.labs/source.txt` and write encrypted output to `student_folder/text/encrypted.txt`.
+- Lab includes both encryption and decryption.
+
+### Lab Challenge — Replace Text in a File
+- Read `student_folder/.labs/myanmar.txt`.
+- Replace every instance of Burma with Myanmar.
+- Print the transformed lines:
+  - Myanmar is a country in Southeast Asia.
+  - The capital of Myanmar is Naypyidaw.
+  - Its population is about 54 million people.
+  - Myanmar is a former British colony.
+
+### Program to count lines and total characters
+import sys — allows access to command‑line arguments and system-level features.
