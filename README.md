@@ -505,3 +505,79 @@ source → dest: create new output without altering original.
 
 ### Program to count lines and total characters
 import sys — allows access to command‑line arguments and system-level features.
+
+# Python Object Basics: Functions, Recursion, and Objects – Codio Course 3
+
+## functionbasics.py
+This file demonstrates core Python function concepts:
+- how to define a function (header + body). Defining a function does not cause Python to run it.
+- how to call a function
+- how indentation affects execution
+- why order matters (functions must be defined before use)
+- how to add a docstring for help(). Triple quotes create a docstring for user-defined functions only, which Python stores as the function’s internal documentation. Even if the function definition already explains what it does, the docstring is still needed because it becomes the function’s official help text (function.__doc__) and is what help() displays.
+- how functions support divide‑and‑conquer problem solving. Divide‑and‑conquer breaks a complex drawing task into small, single‑purpose functions. Each shape—roof, house, door—is its own function. Calling the functions in sequence produces the full house. This modular structure makes the program easier to understand, maintain, and extend.
+
+Examples include defining greet_twice(), calling it, observing whitespace effects, adding docstrings, and using functions to structure drawing tasks.
+
+## parameters.py
+This file demonstrates Python function parameters:
+- defining functions with parameters
+- understanding positional vs named parameters
+- passing different data types as parameters
+- using try/except to handle parameter errors
+- customizing TypeError messages
+- defining optional parameters with default values. 
+Call: You do not have to specify the optional parameter with the function call.
+Definition: You must specify the optional parameter and its default value in the function definition.
+- using variable‑length parameter lists via *args
+
+Exercises include addition, add/subtract, named parameters, type inspection, error handling, optional parameters, and variable parameter lists.
+
+## variablescope.py
+This file demonstrates Python variable scope rules:
+- local scope — variables created inside a function exist only inside that function
+- global scope — variables created in the main program can be referenced inside functions
+- global keyword — allows modification of a global variable from inside a function
+- precedence — local variables override global variables when names collide
+- scope resolution — understanding when a variable is accessible or shadowed
+
+Exercises mirror the instructional examples: local‑only variables, multiple independent local scopes, referencing globals, modifying globals with global, and collisions between local and global names.
+
+## returningvalues.py
+This file demonstrates how Python functions return values instead of printing them. It covers:
+- using the return keyword. Return keyword returns a value calculated by a function back to the program. Functions can return any valid datatype.
+- understanding that print() returns None
+- returning multiple data types (int, float, string, list)
+- defining and identifying side effects
+- writing pure functions that return values without modifying external state. Side effects are operations that change state or produce output during execution. A side effect is when a function causes a change that is external to the function itself. External changes — printing, modifying globals, writing files, changing state — are side effects.
+Pure functions avoid these changes, which makes programs easier to test and less error‑prone. Pure functions simplify debugging because you only inspect inputs and outputs, not hidden state changes.
+- showing how returned values can update global variables without using global
+- separating computation (pure functions) from side effects (printing)
+
+Exercises mirror the instructional examples: returning values, returning different types, list‑returning functions, global updates via returned values, and pure functions used inside a program that prints results.
+
+## advancedconcepts.py
+This file demonstrates advanced user‑defined function concepts:
+- helper functions — Helper functions are functions that return a result used by another function.
+They may be defined outside the function they support or nested inside it.
+- inner functions — functions defined inside another function, hidden from the global scope
+- Function composition passes one function’s result directly into another.
+Composition of built‑ins chains built‑in functions so one output becomes the next input.
+- modularity — dividing programs into reusable, independent functions
+
+Exercises mirror the instructional examples: radius/area helper functions, math.pow variations, inner functions, function composition, readability comparisons, built‑in function composition, and modular turtle‑graphics drawing.
+
+## c3m1lab.py
+This module implements a command‑line movie‑sorting application. It covers:
+- reading CSV movie data
+- printing formatted movie rows
+- sorting a list of lists by any column
+- handling numeric vs string sorting (gross column)
+- supporting ascending/descending order
+- building a user interface loop
+- validating user input with helper functions
+- using composition of functions to structure the program. When one function takes another function as a parameter, this is called function composition.
+
+The pass keyword is a placeholder for a function body. This allows you code to run without errors even though the function has not yet been written.
+
+Labs progress from basic CSV reading → formatting → sorting → descending order → full CLI → helper functions → final challenge.
